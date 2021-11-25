@@ -1,15 +1,14 @@
 package com.zhdlxh48.hellospring.service;
 
 import com.zhdlxh48.hellospring.domain.Member;
-import com.zhdlxh48.hellospring.repository.MemberRepository;
 import com.zhdlxh48.hellospring.repository.MemoryMemberRepository;
-import org.assertj.core.api.Assertions;
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.*;
 import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
 // Given && When && Then
 class MemberServiceTest {
@@ -21,7 +20,7 @@ class MemberServiceTest {
         repository = new MemoryMemberRepository();
         service = new MemberService(repository);
     }
-    
+
     @AfterEach
     public void afterEach() {
         repository.clearStore();
