@@ -10,10 +10,8 @@ import java.util.List;
 import java.util.Optional;
 
 // 서비스 로직과 비즈니스 로직은 이름부터 각각의 성격을 띄도록 확실히 구분해야 함
-
 public class MemberService {
     private final MemberRepository repository;
-
 
     public MemberService(MemberRepository repository) {
         this.repository = repository;
