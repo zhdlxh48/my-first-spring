@@ -5,6 +5,7 @@ import com.zhdlxh48.hellospring.repository.MemberRepository;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.annotation.Commit;
 import org.springframework.transaction.annotation.Transactional;
 
 import static org.assertj.core.api.Assertions.assertThat;
@@ -18,6 +19,8 @@ class MemberServiceIntegrationTest {
     @Autowired MemberRepository repository;
 
     @Test
+    // @Commit
+    // Commit 을 하면 DB 에 저장됨
     public void join() {
         Member member = new Member();
         member.setName("spring");
