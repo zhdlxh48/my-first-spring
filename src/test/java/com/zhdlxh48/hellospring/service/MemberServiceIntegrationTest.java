@@ -13,7 +13,7 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 
 // TODO: DB 의 Transaction 에 대해 알아보기
 @SpringBootTest // Spring 컨테이너 안에서 테스트를 실행한다
-@Transactional // 테스트 시작 전 트랜젝션을 하고 마지막에 Rollback 을 실행해 기록을 남기지 않는다
+@Transactional // 테스트 시작 전 트랜 젝션을 하고 마지막에 Rollback 을 실행해 기록을 남기지 않는다
 class MemberServiceIntegrationTest {
     @Autowired MemberService service;
     @Autowired MemberRepository repository;
