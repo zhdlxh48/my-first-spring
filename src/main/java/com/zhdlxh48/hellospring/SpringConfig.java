@@ -1,6 +1,7 @@
 package com.zhdlxh48.hellospring;
 
 import com.zhdlxh48.hellospring.repository.JdbcMemberRepository;
+import com.zhdlxh48.hellospring.repository.JdbcTemplateMemberRepository;
 import com.zhdlxh48.hellospring.repository.MemberRepository;
 import com.zhdlxh48.hellospring.repository.MemoryMemberRepository;
 import com.zhdlxh48.hellospring.service.MemberService;
@@ -27,6 +28,7 @@ public class SpringConfig {
     @Bean
     public MemberRepository memberRepository() {
 //        return new MemoryMemberRepository();
-        return new JdbcMemberRepository(dataSource);
+//        return new JdbcMemberRepository(dataSource);
+        return new JdbcTemplateMemberRepository(dataSource);
     }
 }
